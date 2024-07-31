@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-main .SectionRestaurants, main .SectionMenu, main .SectionPresentation, main .SectionLocalisation, header {
+
+main .SectionRestaurants,
+main .SectionMenu,
+main .SectionPresentation,
+main .SectionLocalisation,
+header {
   display: grid;
   align-items: center;
   justify-content: center;
@@ -33,17 +38,20 @@ header {
   position: relative;
   top: 20px;
 }
+
 header h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
   margin-bottom: 22px;
 }
+
 header a {
   position: absolute;
   left: 22px;
   top: 9px;
   font-size: 1.2em;
 }
+
 header img {
   max-width: 100%;
 }
@@ -57,16 +65,20 @@ footer {
   background-color: #353535;
   padding: 2em;
 }
+
 footer h3 {
   font-family: "Shrikhand", cursive;
   padding-bottom: 15px;
 }
+
 footer a {
   color: white;
 }
+
 footer li {
   padding-bottom: 10px;
 }
+
 footer i {
   margin-right: 6px;
 }
@@ -77,28 +89,35 @@ main .SectionLocalisation {
   background: #eaeaea;
   background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, rgb(234, 234, 234) 100%);
 }
+
 main .SectionLocalisation i {
   padding: 0 0.5em 0 0;
 }
+
 main .SectionPresentation {
   grid-template-columns: repeat(1, 1fr);
   padding: 2em 0 3em;
   background: #f6f6f6;
   text-align: center;
 }
+
 main .SectionPresentation h2 {
   padding: 0 5em;
 }
+
 main .SectionPresentation p {
   padding: 1em 5em 2em;
 }
+
 main .SectionMenu {
   grid-template-columns: repeat(1, 1fr);
   padding: 2em 1em;
 }
+
 main .SectionMenu h2 {
   justify-self: start;
 }
+
 main .SectionMenu ul {
   display: grid;
   grid-template-columns: 1fr;
@@ -107,14 +126,17 @@ main .SectionMenu ul {
   width: 90%;
   margin: 1em 1em 0;
 }
+
 main .SectionMenu ul li p {
   display: inline-block;
   position: relative;
   left: -0.8em;
 }
+
 main .SectionMenu ul li i {
   padding: 0 1em 0 0;
 }
+
 main .SectionMenu ul li::before {
   counter-increment: compteur;
   content: counter(compteur);
@@ -125,21 +147,26 @@ main .SectionMenu ul li::before {
   background-color: #9356DC;
   color: white;
 }
+
 main .SectionMenu ul li:hover {
   background-color: #f2eafb;
   cursor: pointer;
 }
+
 main .SectionMenu ul li:hover i {
   color: #9356DC;
 }
+
 main .SectionRestaurants {
   grid-template-columns: repeat(1, 1fr);
   padding: 2em 1em;
   background: #f6f6f6;
 }
+
 main .SectionRestaurants h2 {
   justify-self: start;
 }
+
 main .SectionRestaurants ul {
   display: grid;
   grid-template-columns: 1fr;
@@ -147,10 +174,12 @@ main .SectionRestaurants ul {
   margin: 1em 0;
   width: 95%;
 }
+
 main .SectionRestaurants ul li {
   display: inline-block;
   width: 100%;
 }
+
 main .SectionRestaurants ul li a {
   display: block;
   position: relative;
@@ -159,6 +188,7 @@ main .SectionRestaurants ul li a {
   border-radius: 1.5em;
   background-color: white;
 }
+
 main .SectionRestaurants ul li a .sticker {
   position: absolute;
   right: 1em;
@@ -168,6 +198,7 @@ main .SectionRestaurants ul li a .sticker {
   background: #99e2d0;
   border-radius: 0.2em;
 }
+
 main .SectionRestaurants ul li a img {
   padding: 0 0 0.5rem 0;
   width: 100%;
@@ -175,10 +206,12 @@ main .SectionRestaurants ul li a img {
   object-fit: cover;
   border-radius: 1.5em 1.5em 0 0;
 }
+
 main .SectionRestaurants ul li a h3,
 main .SectionRestaurants ul li a p {
   padding: 0 1rem 0.5rem;
 }
+
 main .SectionRestaurants ul li a .btn__like {
   position: absolute;
   bottom: 1.5em;
@@ -195,28 +228,35 @@ main .SectionTitre {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 main .SectionTitre h2 {
   font-family: "Shrikhand", cursive;
-  margin-left: 10px;
+  padding-left: 20px;
   width: 90%;
   display: flex;
   justify-content: space-between;
 }
+
 main .SectionTitre h2 button {
   font-size: 1em;
   position: relative;
 }
+
 main .Entree h3,
 main .Plats h3,
 main .Desserts h3 {
   text-transform: uppercase;
+  padding: 20px 10px 15px 20px;
 }
+
 main .Entree ul,
 main .Plats ul,
 main .Desserts ul {
   display: grid;
   gap: 10px;
+  padding: 0 10px 10px 10px;
 }
+
 main .Entree ul .list-item,
 main .Plats ul .list-item,
 main .Desserts ul .list-item {
@@ -225,6 +265,7 @@ main .Desserts ul .list-item {
   cursor: pointer;
   padding: 1em;
 }
+
 main .Entree ul .list-item h4,
 main .Plats ul .list-item h4,
 main .Desserts ul .list-item h4 {
@@ -234,6 +275,7 @@ main .Desserts ul .list-item h4 {
   text-overflow: ellipsis;
   transition: all 0.5s;
 }
+
 main .Entree ul .list-item p,
 main .Plats ul .list-item p,
 main .Desserts ul .list-item p {
@@ -243,6 +285,7 @@ main .Desserts ul .list-item p {
   text-overflow: ellipsis;
   transition: all 0.5s;
 }
+
 main .Entree ul .list-item strong,
 main .Plats ul .list-item strong,
 main .Desserts ul .list-item strong {
@@ -252,6 +295,7 @@ main .Desserts ul .list-item strong {
   transition: all 0.5s;
   font-weight: 600;
 }
+
 main .Entree ul .list-item span,
 main .Plats ul .list-item span,
 main .Desserts ul .list-item span {
@@ -268,32 +312,38 @@ main .Desserts ul .list-item span {
   font-size: 1.3em;
   color: white;
 }
+
 main .Entree ul .list-item:hover span,
 main .Plats ul .list-item:hover span,
 main .Desserts ul .list-item:hover span {
   right: 0em;
 }
+
 main .Entree ul .list-item:hover strong,
 main .Plats ul .list-item:hover strong,
 main .Desserts ul .list-item:hover strong {
   right: 5em;
 }
+
 main .Entree ul .list-item:hover h4,
 main .Plats ul .list-item:hover h4,
 main .Desserts ul .list-item:hover h4 {
   width: 65%;
 }
+
 main .Entree ul .list-item:hover p,
 main .Plats ul .list-item:hover p,
 main .Desserts ul .list-item:hover p {
   width: 65%;
 }
+
 main .Commander {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4em;
 }
+
 main .Commander .btn {
   padding: 1em 1.5em;
   color: #ffffff;
@@ -307,12 +357,15 @@ main .Commander .btn {
   color: #ffffff;
   transition: all 250ms;
 }
+
 .btn--gradient {
   background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
 }
+
 .btn--radius {
   border-radius: 2em;
 }
+
 .btn:hover {
   opacity: 0.8;
   box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
@@ -324,6 +377,7 @@ button .heart-away {
   transform: scale(1);
   transition: all 0.5s;
 }
+
 .btn__like .heart-hover,
 button .heart-hover {
   display: block;
@@ -344,6 +398,7 @@ button:hover .heart-away {
   opacity: 0;
   transform: scale(0);
 }
+
 .btn__like:hover .heart-hover,
 button:hover .heart-hover {
   opacity: 1;
