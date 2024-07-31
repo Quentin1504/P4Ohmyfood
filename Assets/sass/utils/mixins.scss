@@ -1,0 +1,5 @@
+// fonction réutilisable pour scss
+
+@mixin gridtemplate($value) {
+    grid-template-columns: repeat($value, 1fr);
+}

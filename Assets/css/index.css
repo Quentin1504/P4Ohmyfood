@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+main .SectionRestaurants, main .SectionMenu, main .SectionPresentation, main .SectionLocalisation, header {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+main .Entree h3::after,
+main .Plats h3::after,
+main .Desserts h3::after {
+  border-bottom: 3px solid #99E2D0;
+  content: "";
+  display: block;
+  width: 3em;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  top: 20px;
+}
+header h1 {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  margin-bottom: 22px;
+}
+header a {
+  position: absolute;
+  left: 22px;
+  top: 9px;
+  font-size: 1.2em;
+}
+header img {
+  max-width: 100%;
+}
+
+main h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+footer {
+  color: white;
+  background-color: #353535;
+  padding: 2em;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  padding-bottom: 15px;
+}
+footer a {
+  color: white;
+}
+footer li {
+  padding-bottom: 10px;
+}
+footer i {
+  margin-right: 6px;
+}
+
+main .SectionLocalisation {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 1em;
+  background: #eaeaea;
+  background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, rgb(234, 234, 234) 100%);
+}
+main .SectionLocalisation i {
+  padding: 0 0.5em 0 0;
+}
+main .SectionPresentation {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 2em 0 3em;
+  background: #f6f6f6;
+  text-align: center;
+}
+main .SectionPresentation h2 {
+  padding: 0 5em;
+}
+main .SectionPresentation p {
+  padding: 1em 5em 2em;
+}
+main .SectionMenu {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 2em 1em;
+}
+main .SectionMenu h2 {
+  justify-self: start;
+}
+main .SectionMenu ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  counter-reset: compteur;
+  width: 90%;
+  margin: 1em 1em 0;
+}
+main .SectionMenu ul li p {
+  display: inline-block;
+  position: relative;
+  left: -0.8em;
+}
+main .SectionMenu ul li i {
+  padding: 0 1em 0 0;
+}
+main .SectionMenu ul li::before {
+  counter-increment: compteur;
+  content: counter(compteur);
+  position: relative;
+  left: -1.9em;
+  padding: 0.3em 0.6em;
+  border-radius: 70%;
+  background-color: #9356DC;
+  color: white;
+}
+main .SectionMenu ul li:hover {
+  background-color: #f2eafb;
+  cursor: pointer;
+}
+main .SectionMenu ul li:hover i {
+  color: #9356DC;
+}
+main .SectionRestaurants {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 2em 1em;
+  background: #f6f6f6;
+}
+main .SectionRestaurants h2 {
+  justify-self: start;
+}
+main .SectionRestaurants ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5em;
+  margin: 1em 0;
+  width: 95%;
+}
+main .SectionRestaurants ul li {
+  display: inline-block;
+  width: 100%;
+}
+main .SectionRestaurants ul li a {
+  display: block;
+  position: relative;
+  padding: 0 0 0.7rem 0;
+  color: #000000;
+  border-radius: 1.5em;
+  background-color: white;
+}
+main .SectionRestaurants ul li a .sticker {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  padding: 0.4em 0.6em;
+  color: #008766;
+  background: #99e2d0;
+  border-radius: 0.2em;
+}
+main .SectionRestaurants ul li a img {
+  padding: 0 0 0.5rem 0;
+  width: 100%;
+  height: 12.5em;
+  object-fit: cover;
+  border-radius: 1.5em 1.5em 0 0;
+}
+main .SectionRestaurants ul li a h3,
+main .SectionRestaurants ul li a p {
+  padding: 0 1rem 0.5rem;
+}
+main .SectionRestaurants ul li a .btn__like {
+  position: absolute;
+  bottom: 1.5em;
+  right: 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+main .SectionTitre {
+  background-color: white;
+  border-radius: 25px 25px 0 0;
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+main .SectionTitre h2 {
+  font-family: "Shrikhand", cursive;
+  margin-left: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+main .SectionTitre h2 button {
+  font-size: 1em;
+  position: relative;
+}
+main .Entree h3,
+main .Plats h3,
+main .Desserts h3 {
+  text-transform: uppercase;
+}
+main .Entree ul,
+main .Plats ul,
+main .Desserts ul {
+  display: grid;
+  gap: 10px;
+}
+main .Entree ul .list-item,
+main .Plats ul .list-item,
+main .Desserts ul .list-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 1em;
+}
+main .Entree ul .list-item h4,
+main .Plats ul .list-item h4,
+main .Desserts ul .list-item h4 {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.5s;
+}
+main .Entree ul .list-item p,
+main .Plats ul .list-item p,
+main .Desserts ul .list-item p {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.5s;
+}
+main .Entree ul .list-item strong,
+main .Plats ul .list-item strong,
+main .Desserts ul .list-item strong {
+  position: absolute;
+  right: 2em;
+  bottom: 1em;
+  transition: all 0.5s;
+  font-weight: 600;
+}
+main .Entree ul .list-item span,
+main .Plats ul .list-item span,
+main .Desserts ul .list-item span {
+  position: absolute;
+  right: -3em;
+  height: 100%;
+  width: 3em;
+  background-color: #99e2d0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  font-size: 1.3em;
+  color: white;
+}
+main .Entree ul .list-item:hover span,
+main .Plats ul .list-item:hover span,
+main .Desserts ul .list-item:hover span {
+  right: 0em;
+}
+main .Entree ul .list-item:hover strong,
+main .Plats ul .list-item:hover strong,
+main .Desserts ul .list-item:hover strong {
+  right: 5em;
+}
+main .Entree ul .list-item:hover h4,
+main .Plats ul .list-item:hover h4,
+main .Desserts ul .list-item:hover h4 {
+  width: 65%;
+}
+main .Entree ul .list-item:hover p,
+main .Plats ul .list-item:hover p,
+main .Desserts ul .list-item:hover p {
+  width: 65%;
+}
+main .Commander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+}
+main .Commander .btn {
+  padding: 1em 1.5em;
+  color: #ffffff;
+  transition: all 250ms;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.btn {
+  padding: 1em 1.5em;
+  color: #ffffff;
+  transition: all 250ms;
+}
+.btn--gradient {
+  background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
+}
+.btn--radius {
+  border-radius: 2em;
+}
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+}
+
+.btn__like .heart-away,
+button .heart-away {
+  display: block;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.btn__like .heart-hover,
+button .heart-hover {
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: scale(0);
+  transition: all 0.5s;
+  background-color: black;
+  background-image: linear-gradient(0deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.btn__like:hover .heart-away,
+button:hover .heart-away {
+  opacity: 0;
+  transform: scale(0);
+}
+.btn__like:hover .heart-hover,
+button:hover .heart-hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.list-item {
+  padding: 1.5em 1em;
+  text-align: left;
+  border-radius: 1em;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+}

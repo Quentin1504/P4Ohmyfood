@@ -1,0 +1,18 @@
+// class réutilisable pour le scss
+
+%gridcenter {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+%bordervert {
+    &::after {
+        border-bottom: 3px solid $aqua-tertiaire;
+        content: '';
+        display: block;
+        width: 3em;
+    }
+
+}

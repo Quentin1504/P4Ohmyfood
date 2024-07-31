@@ -1,0 +1,27 @@
+footer {
+    color: white;
+    background-color: #353535;
+    padding: 2em;
+
+
+    & h3 {
+        font-family: 'Shrikhand', cursive;
+        padding-bottom: 15px;
+    }
+
+    & a {
+        color: white;
+    }
+
+    & li {
+
+        padding-bottom: 10px;
+    }
+
+    & i {
+
+        margin-right: 6px;
+    }
+
+
+}

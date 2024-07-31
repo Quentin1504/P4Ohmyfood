@@ -1,0 +1,24 @@
+//utils
+@import "./utils/variables";
+@import "./utils/fonts.scss";
+@import "./utils/keyframes.scss";
+@import "./utils/mixins.scss";
+@import "./utils/placeholders.scss";
+
+//template
+@import "./template/template.scss";
+
+//layout
+@import "./layout/header.scss";
+@import "./layout/main.scss";
+@import "./layout/footer.scss";
+
+//pages
+@import "./page/accueil.scss";
+@import "./page/restaurants.scss";
+
+//componente
+@import "./components/boutton.scss";
+@import "./components/hearts.scss";
+@import "./components/liste.scss";
+@import "./components/loader.scss";
