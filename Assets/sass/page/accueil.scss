@@ -1,5 +1,6 @@
 main {
 
+
     & .SectionLocalisation {
         @extend %gridcenter;
         @include gridtemplate(1);
@@ -50,11 +51,20 @@ main {
             width: 90%;
             margin: 1em 1em 0;
 
+            @media (min-width: $tablette) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (min-width: $ordi) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
             & li {
                 & p {
                     display: inline-block;
                     position: relative;
                     left: -0.8em;
+
                 }
 
                 & i {
@@ -102,6 +112,14 @@ main {
             grid-gap: 1.5em;
             margin: 1em 0;
             width: 95%;
+
+            @media (min-width: $tablette) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (min-width: $ordi) {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
 
             & li {

@@ -25,6 +25,15 @@ header {
 
     & img {
         max-width: 100%;
+
+        @media (min-width: $tablette) {}
+
+        @media (min-width: $ordi) {
+            padding-top: -50%;
+            ;
+        }
+
+
     }
 
 }
