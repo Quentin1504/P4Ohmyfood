@@ -26,11 +26,18 @@ header {
     & img {
         max-width: 100%;
 
-        @media (min-width: $tablette) {}
+        @media (min-width: $tablette) {
+            width: 100%;
+            height: 25em;
+            object-fit: cover;
+        }
 
         @media (min-width: $ordi) {
-            padding-top: -50%;
-            ;
+            width: 100%;
+            height: 25em;
+            object-fit: cover;
+
+
         }
 
 
