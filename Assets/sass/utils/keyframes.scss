@@ -1,1 +1,21 @@
-//toutes les animation keyframes
+@keyframes appearlist {
+    0% {
+        transform: translateY(2em);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes disapearloader {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}

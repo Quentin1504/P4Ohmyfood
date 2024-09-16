@@ -1,25 +1,26 @@
 main {
+    @media (min-width: $tablette) {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (min-width: $ordi) {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     & .SectionTitre {
-        background-color: white;
+        background-color: $background-grisclaire ;
         border-radius: 25px 25px 0 0;
         position: relative;
         width: 100%;
         padding-top: 20px;
         padding-bottom: 20px;
 
-        @media (min-width: $tablette) {
-            background-color: $background-blancclaire;
-            border-radius: 25px 25px 0 0;
-            display: flex;
-
-
-        }
-
-        @media (min-width: $ordi) {
-            background-color: $background-blancclaire;
-
-        }
 
         & h2 {
             font-family: 'Shrikhand', cursive;
@@ -41,21 +42,10 @@ main {
     .Plats,
     .Desserts {
         & h3 {
+            background-color: $background-grisclaire ;
             text-transform: uppercase;
             @extend %bordervert;
             padding: 30px 0 10px 20px;
-
-
-            @media (min-width: $tablette) {
-                background-color: $background-blancclaire;
-
-            }
-
-            @media (min-width: $ordi) {
-                background-color: $background-blancclaire;
-
-            }
-
 
         }
 
@@ -64,15 +54,6 @@ main {
             gap: 15px;
             padding: 4px;
 
-            @media (min-width: $tablette) {
-                background-color: $background-blancclaire;
-
-            }
-
-            @media (min-width: $ordi) {
-                background-color: $background-blancclaire;
-
-            }
 
             & li {
 
@@ -124,16 +105,26 @@ main {
                     transition: all 0.5s;
                     font-size: 1.3em;
                     color: white;
-
-
                 }
+
+
+            }
+
+            & .list-item {
+                animation: appearlist 1000ms forwards;
+                opacity: 0;
+
+                @for $i from 1 to 10 {
+                    &--#{$i} {
+                        animation-delay: 200ms * $i;
+                    }
+                }
+
             }
 
             & .list-item:hover {
                 & span {
-
                     right: 0em;
-
                 }
 
                 & strong {
@@ -155,10 +146,12 @@ main {
     }
 
     & .Commander {
+        background-color: $background-grisclaire ;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 4em;
+        padding-top: 4em;
+        padding-bottom: 4em;
 
         & .btn {
             padding: 1em 1.5em;
@@ -168,5 +161,65 @@ main {
             padding-right: 60px;
         }
     }
+
+    .SectionTitre,
+    .Entree,
+    .Plats,
+    .Desserts,
+    .Commander {
+
+
+
+        @media (min-width: $tablette) {
+            background-color: $background-grisclaire;
+            width: 80%;
+            align-items: center;
+
+
+
+            & h2 {
+                justify-content: center;
+            }
+
+            & h3 {
+                padding-left: 150px;
+            }
+
+            & ul {
+                padding: 0 7%;
+            }
+
+        }
+
+        @media (min-width: $ordi) {
+            background-color: $background-grisclaire;
+            width: 80%;
+            align-items: center;
+
+
+            & h2 {
+                justify-content: center;
+            }
+
+
+            & h3 {
+                padding: 20px 7%;
+            }
+
+            & button {
+
+                padding-left: 50px;
+            }
+
+
+
+
+            & ul {
+                padding: 0 7%;
+            }
+        }
+
+    }
+
 
 }

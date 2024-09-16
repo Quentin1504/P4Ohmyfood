@@ -1,5 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-main .SectionRestaurants, main .SectionMenu, main .SectionPresentation, main .SectionLocalisation, header {
+@keyframes appearlist {
+  0% {
+    transform: translateY(2em);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes disapearloader {
+  from {
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.mainacceuil .SectionRestaurants,
+.mainpages .SectionRestaurants, .mainacceuil .SectionMenu,
+.mainpages .SectionMenu, .mainacceuil .SectionPresentation,
+.mainpages .SectionPresentation, .mainacceuil .SectionLocalisation,
+.mainpages .SectionLocalisation, header {
   display: grid;
   align-items: center;
   justify-content: center;
@@ -138,35 +160,47 @@ footer i {
   margin-right: 6px;
 }
 
-main .SectionLocalisation {
+.mainacceuil {
+  align-items: stretch;
+}
+
+.mainacceuil .SectionLocalisation,
+.mainpages .SectionLocalisation {
   grid-template-columns: repeat(1, 1fr);
   padding: 1em;
   background: #eaeaea;
   background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, rgb(234, 234, 234) 100%);
 }
-main .SectionLocalisation i {
+.mainacceuil .SectionLocalisation i,
+.mainpages .SectionLocalisation i {
   padding: 0 0.5em 0 0;
 }
-main .SectionPresentation {
+.mainacceuil .SectionPresentation,
+.mainpages .SectionPresentation {
   grid-template-columns: repeat(1, 1fr);
   padding: 2em 0 3em;
   background: #f6f6f6;
   text-align: center;
 }
-main .SectionPresentation h2 {
+.mainacceuil .SectionPresentation h2,
+.mainpages .SectionPresentation h2 {
   padding: 0 5em;
 }
-main .SectionPresentation p {
+.mainacceuil .SectionPresentation p,
+.mainpages .SectionPresentation p {
   padding: 1em 5em 2em;
 }
-main .SectionMenu {
+.mainacceuil .SectionMenu,
+.mainpages .SectionMenu {
   grid-template-columns: repeat(1, 1fr);
   padding: 2em 1em;
 }
-main .SectionMenu h2 {
+.mainacceuil .SectionMenu h2,
+.mainpages .SectionMenu h2 {
   justify-self: start;
 }
-main .SectionMenu ul {
+.mainacceuil .SectionMenu ul,
+.mainpages .SectionMenu ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
@@ -175,24 +209,29 @@ main .SectionMenu ul {
   margin: 1em 1em 0;
 }
 @media (min-width: 740px) {
-  main .SectionMenu ul {
-    grid-template-columns: repeat(2, 1fr);
+  .mainacceuil .SectionMenu ul,
+  .mainpages .SectionMenu ul {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (min-width: 960px) {
-  main .SectionMenu ul {
+  .mainacceuil .SectionMenu ul,
+  .mainpages .SectionMenu ul {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-main .SectionMenu ul li p {
+.mainacceuil .SectionMenu ul li p,
+.mainpages .SectionMenu ul li p {
   display: inline-block;
   position: relative;
   left: -0.8em;
 }
-main .SectionMenu ul li i {
+.mainacceuil .SectionMenu ul li i,
+.mainpages .SectionMenu ul li i {
   padding: 0 1em 0 0;
 }
-main .SectionMenu ul li::before {
+.mainacceuil .SectionMenu ul li::before,
+.mainpages .SectionMenu ul li::before {
   counter-increment: compteur;
   content: counter(compteur);
   position: relative;
@@ -202,22 +241,27 @@ main .SectionMenu ul li::before {
   background-color: #9356DC;
   color: white;
 }
-main .SectionMenu ul li:hover {
+.mainacceuil .SectionMenu ul li:hover,
+.mainpages .SectionMenu ul li:hover {
   background-color: #f2eafb;
   cursor: pointer;
 }
-main .SectionMenu ul li:hover i {
+.mainacceuil .SectionMenu ul li:hover i,
+.mainpages .SectionMenu ul li:hover i {
   color: #9356DC;
 }
-main .SectionRestaurants {
+.mainacceuil .SectionRestaurants,
+.mainpages .SectionRestaurants {
   grid-template-columns: repeat(1, 1fr);
   padding: 2em 1em;
   background: #f6f6f6;
 }
-main .SectionRestaurants h2 {
+.mainacceuil .SectionRestaurants h2,
+.mainpages .SectionRestaurants h2 {
   justify-self: start;
 }
-main .SectionRestaurants ul {
+.mainacceuil .SectionRestaurants ul,
+.mainpages .SectionRestaurants ul {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.5em;
@@ -225,20 +269,24 @@ main .SectionRestaurants ul {
   width: 95%;
 }
 @media (min-width: 740px) {
-  main .SectionRestaurants ul {
+  .mainacceuil .SectionRestaurants ul,
+  .mainpages .SectionRestaurants ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 960px) {
-  main .SectionRestaurants ul {
+  .mainacceuil .SectionRestaurants ul,
+  .mainpages .SectionRestaurants ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-main .SectionRestaurants ul li {
+.mainacceuil .SectionRestaurants ul li,
+.mainpages .SectionRestaurants ul li {
   display: inline-block;
   width: 100%;
 }
-main .SectionRestaurants ul li a {
+.mainacceuil .SectionRestaurants ul li a,
+.mainpages .SectionRestaurants ul li a {
   display: block;
   position: relative;
   padding: 0 0 0.7rem 0;
@@ -246,7 +294,8 @@ main .SectionRestaurants ul li a {
   border-radius: 1.5em;
   background-color: white;
 }
-main .SectionRestaurants ul li a .sticker {
+.mainacceuil .SectionRestaurants ul li a .sticker,
+.mainpages .SectionRestaurants ul li a .sticker {
   position: absolute;
   right: 1em;
   top: 1em;
@@ -255,18 +304,22 @@ main .SectionRestaurants ul li a .sticker {
   background: #99e2d0;
   border-radius: 0.2em;
 }
-main .SectionRestaurants ul li a img {
+.mainacceuil .SectionRestaurants ul li a img,
+.mainpages .SectionRestaurants ul li a img {
   padding: 0 0 0.5rem 0;
   width: 100%;
   height: 12.5em;
   object-fit: cover;
   border-radius: 1.5em 1.5em 0 0;
 }
-main .SectionRestaurants ul li a h3,
-main .SectionRestaurants ul li a p {
+.mainacceuil .SectionRestaurants ul li a h3,
+.mainacceuil .SectionRestaurants ul li a p,
+.mainpages .SectionRestaurants ul li a h3,
+.mainpages .SectionRestaurants ul li a p {
   padding: 0 1rem 0.5rem;
 }
-main .SectionRestaurants ul li a .btn__like {
+.mainacceuil .SectionRestaurants ul li a .btn__like,
+.mainpages .SectionRestaurants ul li a .btn__like {
   position: absolute;
   bottom: 1.5em;
   right: 1em;
@@ -274,25 +327,27 @@ main .SectionRestaurants ul li a .btn__like {
   cursor: pointer;
 }
 
+@media (min-width: 740px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 960px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 main .SectionTitre {
-  background-color: white;
+  background-color: #F6F6F6;
   border-radius: 25px 25px 0 0;
   position: relative;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-@media (min-width: 740px) {
-  main .SectionTitre {
-    background-color: #eaeaea;
-    border-radius: 25px 25px 0 0;
-    display: flex;
-  }
-}
-@media (min-width: 960px) {
-  main .SectionTitre {
-    background-color: #eaeaea;
-  }
 }
 main .SectionTitre h2 {
   font-family: "Shrikhand", cursive;
@@ -308,22 +363,9 @@ main .SectionTitre h2 button {
 main .Entree h3,
 main .Plats h3,
 main .Desserts h3 {
+  background-color: #F6F6F6;
   text-transform: uppercase;
   padding: 30px 0 10px 20px;
-}
-@media (min-width: 740px) {
-  main .Entree h3,
-  main .Plats h3,
-  main .Desserts h3 {
-    background-color: #eaeaea;
-  }
-}
-@media (min-width: 960px) {
-  main .Entree h3,
-  main .Plats h3,
-  main .Desserts h3 {
-    background-color: #eaeaea;
-  }
 }
 main .Entree ul,
 main .Plats ul,
@@ -331,20 +373,6 @@ main .Desserts ul {
   display: grid;
   gap: 15px;
   padding: 4px;
-}
-@media (min-width: 740px) {
-  main .Entree ul,
-  main .Plats ul,
-  main .Desserts ul {
-    background-color: #eaeaea;
-  }
-}
-@media (min-width: 960px) {
-  main .Entree ul,
-  main .Plats ul,
-  main .Desserts ul {
-    background-color: #eaeaea;
-  }
 }
 main .Entree ul li,
 main .Plats ul li,
@@ -402,6 +430,57 @@ main .Desserts ul .list-item span {
   font-size: 1.3em;
   color: white;
 }
+main .Entree ul .list-item,
+main .Plats ul .list-item,
+main .Desserts ul .list-item {
+  animation: appearlist 1000ms forwards;
+  opacity: 0;
+}
+main .Entree ul .list-item--1,
+main .Plats ul .list-item--1,
+main .Desserts ul .list-item--1 {
+  animation-delay: 200ms;
+}
+main .Entree ul .list-item--2,
+main .Plats ul .list-item--2,
+main .Desserts ul .list-item--2 {
+  animation-delay: 400ms;
+}
+main .Entree ul .list-item--3,
+main .Plats ul .list-item--3,
+main .Desserts ul .list-item--3 {
+  animation-delay: 600ms;
+}
+main .Entree ul .list-item--4,
+main .Plats ul .list-item--4,
+main .Desserts ul .list-item--4 {
+  animation-delay: 800ms;
+}
+main .Entree ul .list-item--5,
+main .Plats ul .list-item--5,
+main .Desserts ul .list-item--5 {
+  animation-delay: 1000ms;
+}
+main .Entree ul .list-item--6,
+main .Plats ul .list-item--6,
+main .Desserts ul .list-item--6 {
+  animation-delay: 1200ms;
+}
+main .Entree ul .list-item--7,
+main .Plats ul .list-item--7,
+main .Desserts ul .list-item--7 {
+  animation-delay: 1400ms;
+}
+main .Entree ul .list-item--8,
+main .Plats ul .list-item--8,
+main .Desserts ul .list-item--8 {
+  animation-delay: 1600ms;
+}
+main .Entree ul .list-item--9,
+main .Plats ul .list-item--9,
+main .Desserts ul .list-item--9 {
+  animation-delay: 1800ms;
+}
 main .Entree ul .list-item:hover span,
 main .Plats ul .list-item:hover span,
 main .Desserts ul .list-item:hover span {
@@ -423,10 +502,12 @@ main .Desserts ul .list-item:hover p {
   width: 65%;
 }
 main .Commander {
+  background-color: #F6F6F6;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4em;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 main .Commander .btn {
   padding: 1em 1.5em;
@@ -434,6 +515,77 @@ main .Commander .btn {
   transition: all 250ms;
   padding-left: 60px;
   padding-right: 60px;
+}
+@media (min-width: 740px) {
+  main .SectionTitre,
+  main .Entree,
+  main .Plats,
+  main .Desserts,
+  main .Commander {
+    background-color: #F6F6F6;
+    width: 80%;
+    align-items: center;
+  }
+  main .SectionTitre h2,
+  main .Entree h2,
+  main .Plats h2,
+  main .Desserts h2,
+  main .Commander h2 {
+    justify-content: center;
+  }
+  main .SectionTitre h3,
+  main .Entree h3,
+  main .Plats h3,
+  main .Desserts h3,
+  main .Commander h3 {
+    padding-left: 150px;
+  }
+  main .SectionTitre ul,
+  main .Entree ul,
+  main .Plats ul,
+  main .Desserts ul,
+  main .Commander ul {
+    padding: 0 7%;
+  }
+}
+@media (min-width: 960px) {
+  main .SectionTitre,
+  main .Entree,
+  main .Plats,
+  main .Desserts,
+  main .Commander {
+    background-color: #F6F6F6;
+    width: 80%;
+    align-items: center;
+  }
+  main .SectionTitre h2,
+  main .Entree h2,
+  main .Plats h2,
+  main .Desserts h2,
+  main .Commander h2 {
+    justify-content: center;
+  }
+  main .SectionTitre h3,
+  main .Entree h3,
+  main .Plats h3,
+  main .Desserts h3,
+  main .Commander h3 {
+    padding: 20px 7%;
+  }
+  main .SectionTitre button,
+  main .Entree button,
+  main .Plats button,
+  main .Desserts button,
+  main .Commander button {
+    padding-left: 50px;
+  }
+  main .SectionTitre ul,
+  main .Entree ul,
+  main .Plats ul,
+  main .Desserts ul,
+  main .Commander ul {
+    padding: 0 7%;
+  }
 }
 
 .btn {
@@ -489,4 +641,52 @@ button:hover .heart-hover {
   text-align: left;
   border-radius: 1em;
   box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  position: fixed;
+  animation: 1s disapearloader 2000ms ease forwards;
+}
+
+.loadericon {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+}
+
+.loadericon::after,
+.loadericon::before {
+  content: "";
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #9356DC;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: animloader 2s linear infinite;
+}
+
+.loadericon::after {
+  animation-delay: 1s;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }

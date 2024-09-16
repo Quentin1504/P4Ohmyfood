@@ -1,4 +1,10 @@
-main {
+.mainacceuil {
+    align-items: stretch;
+}
+
+.mainacceuil,
+.mainpages {
+
 
 
     & .SectionLocalisation {
@@ -52,7 +58,7 @@ main {
             margin: 1em 1em 0;
 
             @media (min-width: $tablette) {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(1, 1fr);
             }
 
             @media (min-width: $ordi) {
